@@ -37,7 +37,27 @@
 \contentsline {subsection}{\numberline {3.7.1}Results}{61}{}%
 \contentsline {section}{\numberline {3.8}Bayesian approach}{62}{}%
 \contentsline {chapter}{\numberline {4}Preheating}{69}{}%
-\contentsline {chapter}{\numberline {5}Other models of Preheating}{71}{}%
-\contentsline {chapter}{\numberline {6}Non Linear Evolution After Preheating: Bubbly Stage}{73}{}%
-\contentsline {chapter}{\numberline {7}Thermalitation}{75}{}%
-\contentsline {chapter}{\numberline {8}Other Signatures of Reheating}{77}{}%
+\contentsline {section}{\numberline {4.1}Parametric resonance model}{70}{}%
+\contentsline {subsection}{\numberline {4.1.1}Elementary reheating}{70}{}%
+\contentsline {subsection}{\numberline {4.1.2}Parametric resonance}{71}{}%
+\contentsline {section}{\numberline {4.2}After chaotic inflation}{75}{}%
+\contentsline {subsection}{\numberline {4.2.1}Stochastic resonance: numerical analysis}{75}{}%
+\contentsline {subsection}{\numberline {4.2.2}WKB approximation}{77}{}%
+\contentsline {subsection}{\numberline {4.2.3}Stochastic resonance: analytic approach}{78}{}%
+\contentsline {section}{\numberline {4.3}Backreaction and rescattering}{81}{}%
+\contentsline {subsection}{\numberline {4.3.1}Hartree approximation}{81}{}%
+\contentsline {subsection}{\numberline {4.3.2}Complete model}{83}{}%
+\contentsline {section}{\numberline {4.4}Model $\lambda \phi ^{4}$}{84}{}%
+\contentsline {subsection}{\numberline {4.4.1}Equation for the inflaton}{84}{}%
+\contentsline {subsection}{\numberline {4.4.2}Conformal theory}{85}{}%
+\contentsline {subsection}{\numberline {4.4.3}Analysis of Lame equation}{87}{}%
+\contentsline {subsection}{\numberline {4.4.4}Solution for $ \frac {g^{2}}{\lambda }=1 $}{87}{}%
+\contentsline {subsection}{\numberline {4.4.5}Solution for $ \frac {g^{2}}{\lambda }=3 $}{88}{}%
+\contentsline {subsection}{\numberline {4.4.6}Solution for $ \frac {g^{2}}{\lambda } \ll 1 $}{88}{}%
+\contentsline {subsection}{\numberline {4.4.7}Solution for $ \frac {g^{2}}{\lambda } \gg 1 $ }{89}{}%
+\contentsline {subsection}{\numberline {4.4.8}End of resonance}{89}{}%
+\contentsline {subsection}{\numberline {4.4.9}Preheating with a massive self-interacting inflaton}{89}{}%
+\contentsline {section}{\numberline {4.5}Tachyonic preheating}{90}{}%
+\contentsline {chapter}{\numberline {5}Non Linear Evolution After Preheating: Bubble Stage}{91}{}%
+\contentsline {chapter}{\numberline {6}Thermalitation}{93}{}%
+\contentsline {chapter}{\numberline {7}Other Signatures of Reheating}{95}{}%
