@@ -57,6 +57,17 @@
 \contentsline {subsection}{\numberline {4.6.2}Preheating of fermions}{96}{}%
 \contentsline {subsection}{\numberline {4.6.3}Gauge-field preheating}{97}{}%
 \contentsline {subsection}{\numberline {4.6.4}Multi-field preheating}{98}{}%
-\contentsline {chapter}{\numberline {5}After Preheating}{99}{}%
-\contentsline {chapter}{\numberline {6}GWs from Rweheating}{101}{}%
-\contentsline {chapter}{\numberline {7}Thermalitation}{103}{}%
+\contentsline {chapter}{\numberline {5}Non-linear Evolution}{99}{}%
+\contentsline {section}{\numberline {5.1}Tachyonic model}{99}{}%
+\contentsline {subsection}{\numberline {5.1.1}Lattice simulations}{102}{}%
+\contentsline {subsection}{\numberline {5.1.2}Tachyonic model simulations}{103}{}%
+\contentsline {section}{\numberline {5.2}Chaotic models}{107}{}%
+\contentsline {section}{\numberline {5.3}Oscillons}{113}{}%
+\contentsline {chapter}{\numberline {6}Thermalitation}{115}{}%
+\contentsline {section}{\numberline {6.1}Rules of thermalitation}{115}{}%
+\contentsline {section}{\numberline {6.2}Kolmogorov turbolence}{117}{}%
+\contentsline {subsection}{\numberline {6.2.1}Analytical model}{118}{}%
+\contentsline {subsection}{\numberline {6.2.2}Numerical results}{120}{}%
+\contentsline {section}{\numberline {6.3}Equation of state}{121}{}%
+\contentsline {section}{\numberline {6.4}Thermalitation}{122}{}%
+\contentsline {chapter}{\numberline {7}GWs from Reheating}{125}{}%

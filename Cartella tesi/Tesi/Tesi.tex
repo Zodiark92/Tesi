@@ -56,10 +56,8 @@
 		\vspace{20mm}
 		\begin{spacing}{2}
 			\begin{tabular}{ l  c  c c c  cc c c c c  l }
-				{\Large{\bf Thesis supervisor}} &&&&&&&&&&& {\Large{\bf Candidate}}\\
+				{\Large{\bf Supervisor}} &&&&&&&&&&& {\Large{\bf Candidate}}\\
 				{\Large{\bf Prof. Nicola Bartolo}} &&&&&&&&&&& {\Large{\bf Raffaele Giusti}}\\
-				{\Large{\bf Thesis co-supervisor}}\\
-				{\Large{\bf Prof. Daniele Bertacca}}\\
 			\end{tabular}
 		\end{spacing}
 		\vspace{15 mm}
@@ -3365,14 +3363,492 @@ where the final term is similar to the standard preheating interaction $ g^{2}\p
 In the case we consider several oscillating homogeneous fields the periodicity of the time-dependent background can be violated. Unless special situations \cite{Chap4:Lozanov}, the time-dependent coefficients in the equation of motion governing the fluctuations are not exactly periodic. This can lead a stochastic resonance if the adiabaticity condition is violated. \\
 In the case in which the number of oscillating homogeneous fields is much greater than one, the effective masses of the daughter fields evolve randomly. This reduces the efficiency of the particle production, but resonance still takes place. It occurs at all wavenumbers, not only within particular resonance bands. In fact, we can consider the condensed matter phenomenon of Anderson localitation, in which small random impurities make eigenfunctions exponentially localized in space (see \cite{Chap4:Lozanov}). Therefore, we expect that in the case of preheating time-dependent masses with random components give rise to exponentially growing modes at all wavelength. A reference for this type of models can  be found in \cite{Chap4:multifieldPreheating}.
 
+\chapter{Non-linear Evolution}
+The study of reheating in the early universe involves the description of the evolution of interacting fields in a dense, high-energy environment.  Preheating and the subsequent phase of thermalitation involve non-perturbative interactions of fields with exponentially large occupation numbers in states far from thermal equilibrium. As seen in the previous chapter, approximation methods like the Hartree approximation fail in the description of the process because they neglect important scattering terms.\\
+The simplest model of preheating involves a chaotic inflationary scenario with potential $ V(\phi)=\frac{1}{2}m^{2}\phi^{2} $ and a quadratic coupling  of the inflaton to another field $ \frac{1}{2}g^{2}\phi^{2}\chi^{2} $. We studied the process of preheating. However, backreaction of inhomogeneous fluctuations quickly brings the system of interacting scalar fields to a strongly non-linear regime characterized  by very high occupation numbers.\\
+Another important class of inflationary models are given by hybrid inflation scenerios. As discussed, preheating in hybrid inflation, which contains a symmetry breaking mechanism, occurs in the tachyonic way and has a very different character respect to chaotic inflation scenario. \\
+In this chapter we present the numerical results about the process of non-linear interactions of fields during and after preheating. We consider both tachyonic and chaotic models.
+
+\section{Tachyonic model}
+We start discussing the dynamics of spontaneous symmetry breaking that leads the tachyonic preheating process. In this model the particle production is extremelly efficient, much more than  parametric resonance models after chaotic inflation. For reference and details see \cite{Chap5:DynamicsSymmetryBreaking} and \cite{Chap5:TachyonicInstability}.\\
+In the simplest models the instability appears because of the presence of a tachyonic mass term such as $ -m^{2}\phi^{2}/2 $ in the effective potential. This implies the exponentially growing of long wavelength quantum fluctuations $\phi_{k}$ of the field $\phi$ with momenta $ k < m $, $\phi_{k} \sim \exp(t\sqrt{m^{2}-k^{2}})$, which lead to spontaneous symmetry breaking.\\ 
+The spontaneous symmetry breaking process is a strongly non-linear and non-perturbative effect and leads to  production of particles with large occupation numbers. The approximation methods like perturbative theory or Hartree approximation completely fail in the description. However, in the past years  methods of lattice simulations have been developed. They are based on the observation that quantum states of bose fields with large occupation numbers can be interpreted as classical waves and their dynamics can be fully analized through lattice simulations of relativistic wave functions. A significant advantage of this method is that the semi-classical nature of these effects allows us to have a clear visual picture of all the processes involved.\\
+To understand the basic features of a SSB model we consider the simplest model 
+\begin{equation}
+	\label{Chap5:TachyonicModel}
+V(\phi)=\frac{\lambda}{4}(\phi^{2}-v^{2})^{2} \equiv -\frac{m^{2}}{2}\phi^{2} + \frac{\lambda}{4}\phi^{4} + \frac{m^{4}}{4\lambda},
+\end{equation} 
+where $ m^{2}\equiv \lambda v^{2} $ and $\lambda \ll 1$. $ V(\phi) $ has a maximum at $ \phi=0 $ with curvature $ V''=-m^{2} $ and a minimum at $\phi=\pm v$.\\
+Consider the Klein-Gordon equation for the scalar field fluctuations in this model:
+\begin{equation}
+\label{Chap5:TachyonicModel_KGEquation}
+\ddot{\phi}_{k} + (k^{2} + V'')\phi_{k}=0.
+\end{equation}
+Suppose that initially at $ t=0 $  the mode functions describing quantum fluctuations in the symmetric phase $\phi=0$ are the same as for a massless field, $\phi_{k}=\frac{1}{\sqrt{2k}}e^{-ikt + i \textbf{k}\textbf{x}}$. Then, at $ t=0 $ we turn on the term $ -m^{2}\phi^{2}/2 $ corresponding to the negative mass squared $ -m^{2} $. The modes with $ k = |\textbf{k}| < m  $ grow exponentially, $ \sim e^{t\sqrt{m^{2} - k^{2}}} $, until $ \sqrt{<\delta \phi^{2}>} $ reaches the value $\sim v/2$.  At $\phi \sim v/\sqrt{3}$ the curvature of the effective potential vanishes and one has the usual oscillations of all the modes instead of the tachyonic instability. This happens within a time $ t_{*} \sim \frac{1}{2m}\ln \frac{C}{\lambda} $, where $ C\sim 10^{2} $ (see  \cite{Chap5:TachyonicInstability}).\\
+To study this process is convenient to use the occupation number $ n_{k} $ of produced particles. Indeed, in situations where the number of particles is well defined (this happens at the end of the process) the occupation number is an adiabatic invariant, i.e. it does not change during the field oscillations unless some dramatic changes occur to the system. In the previous chapter we have seen the standard definition of the occupation number, which is valid for $ m^{2} \ge 0 $,
+\begin{equation}
+\label{Chap5:TachyonicModel_occupationNumber}
+n_{k}=\frac{\omega_{k}}{2}\Bigg(\frac{|\dot{\phi}_{k}}{\omega_{k}^{2}} + |\phi_{k}|^{2}\Bigg) - \frac{1}{2}.
+\end{equation}
+However, this definition should not be interpreted as the occupation number of particles during the tachyonic regime. In fact, during this stage the effective mass squared of the field $\phi$ becomes negative since $\omega_{k} = \sqrt{k^{2} + m^{2}}$ becomes imaginary. We can define a formal quantity using for example $ \sqrt{k^{2} + |m^{2}|} $ in the expression for $ n_{k} $ whenever $ m^{2} < 0 $. This formal quantity $ n_{k} $ can be interpreted  as the occupation number of particles after the end of the tachyonic regime, when $ m^{2} > 0 $. Indeed, these two quantities matches at the end of the tachyonic stage.\\
+ The exponential growth of fluctuations during the tachyonic regime can be interpreted as the growth of the occupation number of particles with $ k \ll m $. Considering the instant $ t_{*} $ at which the tachyonic growth of the fluctuations ends, it is showed in \cite{Chap5:TachyonicInstability} that $ n_{k} $ for $ k \ll m  $ at the time $ t_{*} $ grows up to $ n_{k} \sim \exp(2mt_{*})  \simeq \mathcal{O}(10^{2})\lambda^{-1} \gg 1$. Thus for small $ \lambda $  fluctuations with $ k \ll m $ acquire very large occupation numbers. Moreover, these fluctuations will have large amplitude  and will be in a squeezed state. If we consider the general solution, it will contains two terms, a growing mode $\sim Ae^{\omega t}$ and a decreasing mode $ \sim Be^{-\omega t} $, but after a short time only the growing mode survives. Then, only modes with $ k < m $ survives after the beginning of the tachyonic regime independently of the initial phase of quantum fluctuations and their amplitude will become extremely large. This implies that we can study these modes by lattice simulations since we can interpret them as classical waves. \\
+Equation for fluctuations in the model $ V(\phi)=-\frac{m^{2}}{2}\phi^{2} + \frac{\lambda}{4}\phi^{4} + \frac{m^{4}}{4\lambda} $ is 
+\begin{equation}
+\label{Chap5:equationFluctuation}
+\ddot{\phi}_{k} + \Bigg(k^{2} -m^{2} +3\lambda\phi^{2}\Bigg) \phi_{k} = 0.
+\end{equation}
+This is the Lame equation that we have seen in the previous chapter and its solutions depend on the parameter combination $ \sqrt{\lambda}\phi_{0}/m  $.
+In the numerical computation this equation should be solved together with the equation for the background field $\phi(t)$:
+\begin{equation}
+\label{Chap5:equationBackground}
+\ddot{\phi} - m^{2}\phi + \lambda \phi^{3} = 0.
+\end{equation}
+In this model the study of the growing of  perturbations is a generalitation of the theory of parametric resonance in the model $ \frac{\lambda}{4}\phi^{4} $, studied using the stability/instability chart of the Lame equation. The additional instability is due to the presence of the negative mass term.\\
+From the analysis of \cite{Chap5:TachyonicInstability} we have the following picture. Consider the evolution of the occupation number $ n_{k} $ of the modes $ \phi_{k}  $ with $ \lambda = 10^{-4} $ with the field rolling from $ \phi_{0}=0.01v $.
+Start with a mode $\phi_{k}$ with $ k\ll m $. When the field $\phi$ rolls from $\phi=\phi_{0}$ to $\phi=v/\sqrt{3}$ the occupation number becomes $ \sim e^{9} $. Then the field reaches the bottom of the effective potential, goes little beyond this point, bounces back and again approaches the tachyonic region $ \phi < v/\sqrt{3} $. The occupation number of particles with $ k \ll m $ does not change much until the field becomes smaller than $ v/\sqrt{3} $.  After this point, however, the comoving number of particles decreases almost to the same value from which the simulation starts. Indeed, this beheaviour is due to the fact that the solution for the fluctuations has two modes, one growing and the other one decaying. Then when the field bounces, fluctuations either grow or decay depending on the phase with which they re-enter the tachyonic regime. In (Fig. \ref{fig:tachyonicinstabilityfig1}) from \cite{Chap5:TachyonicInstability} is showed the growth of $ n_{k} $ during three consecutive oscillations of the field $\phi$. During each full oscillation the occupation numbers grow $ e^{15} $ times. Therefore, during $ n $ oscillations the occupation numbers grow $ e^{15n} $ times.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.25\textheight]{Images/Chap5/TachyonicInstability_Fig1}
+	\caption{Evolution of the occupation numbers for fluctuations with $ k\ll m $ in the model $ V(\phi)=-\frac{m^{2}}{2}\phi^{2} + \frac{\lambda}{4}\phi^{4} + \frac{m^{4}}{4\lambda} $ \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig1}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.25\textheight]{Images/Chap5/TachyonicInstability_Fig2}
+	\caption{Same as in (Fig. \ref{fig:tachyonicinstabilityfig1}) but for $ k=0.5\ m $\cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig2}
+\end{figure}
+We obtain from this model then an incredible fast growth, much faster than in the parametric resonance theories with $ m^{2} > 0 $. This process  can rapidly convert all the energy of the homogeneous field into the energy of the classical interacting fields.\\
+If we consider in general a theory with $ V(\phi) \sim -\phi^{n} $ with $ n > 2 $ the growth of the occupation number for small $ k $ occurs faster. Indeed, the tachyonic fluctuations with small momenta in the long time limit grow as $\phi_{k} \sim \phi^{n/2}$. 
+We can easily prove this statement. Consider a generic model
+\begin{equation}
+\label{Chap5:PotentialGeneric}
+V(\phi)=V_{0}-\lambda\phi^{n}/2.
+\end{equation}
+Consider the field $\phi$ that begins rolling down from $\phi_{0}$. From energy conservation we have 
+\begin{equation}
+\label{Chao5:energyConservation}
+\frac{1}{2}\dot{\phi}^{2} - \frac{1}{2}\dot{\phi}^{2}_{0} = V(\phi_{0}) - V(\phi).
+\end{equation}
+ Assume for semplicity that the field starts from $ \phi=0 $ with zero total energy, i.e. $ \phi_{0}=V_{0}=0 $. Then 
+ \begin{equation}
+\label{Chap5:equationFieldFluctuation}
+\frac{1}{2}\dot{\phi}^{2}=-V(\phi) = \frac{1}{2} \lambda\phi^{n},
+ \end{equation}
+that yields
+\begin{equation}
+\dot{\phi}=\sqrt{\lambda}\phi^{n/2},
+\end{equation}
+and finally,
+\begin{equation}
+\label{Chap5:dependenceFluctuationPotential}
+\phi_{k}=C\phi^{n/2}.
+\end{equation}
+In particular this implies that in the theory with the potential 
+$ -\phi^{2} $ the long wavelength fluctuations grow just like the field itself, i.e. $ \phi_{k} \sim \phi $. If we consider for example a theory with a potential $\sim -\phi^{3} $ the fluctuations grow faster, $ \phi_{k} \sim \phi^{3/2} $, and for the theory $ -\phi^{4} $ they grow even faster, $ \phi_{k} \sim \phi^{2} $.\\
+In the theory $ -m^{2}\phi^{2}$ the fluctuations grow as fast as the scalar field. For example, if one consider $ \phi_{0} \sim 10^{-2}v $, quantum fluctuations grow almost $ 10^{4} $ times when the field falls down from $ \phi=\phi_{0} $ and returns back. The amplitude of inhomogeneites after the return becomes approximately three orders of magnitude larger than $\phi_{0}$. This means that the homogeneous inflaton condensate becomes completely destroyed. When the inflaton field falls down to the minimum of the effective potential again, it becomes divided into large colliding waves. Considering a general potential  $V(\phi) \sim -\phi^{n} $ with $ n>2 $ the process occurs even more faster (see \cite{Chap5:TachyonicInstability}).
+
+\subsection{Lattice simulations}
+To study the beheaviour of this process with lattice simulations in \cite{Chap5:TachyonicInstability} is considered the probability distribution function $ P(\phi,t) $, which is the fraction of the volume containing the field $\phi$ at a time $ t $. At $ t=0 $, at the start of the simulation, the probability distribution is concentrated near $\phi=0$.\\
+In the beginning quantum fluctuations are very small and the probability distribution $ P(\phi,t) $ is very narrowly focused near $\phi=0$. Then it spreads out and shows two maxima that oscillate about $\phi = \pm v$ with an amplitude much smaller than $ v $. The symmetry becomes broken within a single oscillation of the distribution of the field $\phi$. After SSB the space becomes divided into domains with the field $\phi \sim \pm v$ (see (Fig. \ref{fig:tachyonicinstabilityfig3}) from \cite{Chap5:TachyonicInstability}). The size of the domains is large and they become even larger since large domains eat the small ones. In the numerical analysis  are considered only the modes with $ k < m $ since only these modes experience exponential growth and beheave as classical fields.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.35\textheight]{Images/Chap5/TachyonicInstability_Fig3}
+	\caption{The process of symmetry breaking in the model (\ref{Chap5:TachyonicModel}) for $\lambda = 10^{-4}$. The values of the field are shown in units of $ v $, time is shown in units of $ m^{-1} $. For each moment of time, it is also shown the occupation numbers $ n_{k} $ (the lower part of each panel), with $ k $ measured in units of $ m $. At $ t=0 $ one has $ n_{k}=0 $, as in the usual quantum field theory vacuum. In the beginning of the process the occupation numbers $ n_{k} $ grow exponentially for $ k < m $ ($ k < 1 $ in the figure), but then this growth spreads to $ k>m $ because of domain wall formation and collisions of classical waves of the field $\phi$. Within a single oscillation the occupation numbers for $ k\ll m $ grow up to $\sim 10^{6}$.  The spectrum rapidly stabilizes, but it is not thermal yet, and the occupation numbers remain extremely large \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig3}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.45\textheight]{Images/Chap5/TachyonicInstability_Fig4}
+	\caption{Tachyonic growth of quantum fluctuations and the early stages of domain formation in the simplest theory of spontaneous symmetry breaking with $ V(\phi)=-\frac{m^{2}}{2}\phi^{2} + \frac{\lambda}{4}\phi^{4}$ \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig4}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.35\textheight]{Images/Chap5/TachyonicInstability_Fig5}
+	\caption{Formation of domains in the process of symmetry breaking in the model (\ref{Chap5:TachyonicModel}) \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig5}
+\end{figure}
+In (Fig. \ref{fig:tachyonicinstabilityfig4}) and (Fig. \ref{fig:tachyonicinstabilityfig5}) from \cite{Chap5:TachyonicInstability} is showed the growth of fluctuations in a two-dimensional slice of 3D space. Maxima corresponds to domain with $\phi > 0$, while minima corresponds to domains with $\phi < 0$. The third image corresponds to the first one half of an oscillation. In this moment the universe is already divided into domains with $ \phi \pm v $ and initial  size somewhat greater than $ m^{-1} $. Inside  each domain the deviation from $ \phi = |v| $ is much smaller than $ v $. Therefore, from the lattice simulation we see that SSB occurs within a single oscillation. Gradually, the size of each domain grows and the domain wall structure becomes more and more stable. If one continues the simulation for a much longer time we see the formation and growth of domains with $ \phi=\pm v $. In the beginning these domains are small, but they eat each other and grow.\\
+We report also in (Fig. \ref{fig:tachyonicinstabilityfig7}) from \cite{Chap5:TachyonicInstability} the case in which we have the SSB for a theory of a multicomponent scalar field $ \phi_{i} $ with the potential
+\begin{equation}
+	\label{Chap5:TachyonicModelComplex}
+	V(\phi)=\frac{\lambda}{4}(|\phi|^{2}-v^{2})^{2} \equiv -\frac{m^{2}}{2}|\phi|^{2} + \frac{\lambda}{4}|\phi|^{4} + \frac{m^{4}}{4\lambda}.
+\end{equation} 
+In the plots of (Fig. \ref{fig:tachyonicinstabilityfig7}) is illustrated the dynamics with a two-component scalar field $\phi = (\phi_{1} + i\phi_{2})/\sqrt{2}$. It shows the probability distributions $ P(\phi_{i},t) $ which is the fraction of the volume containing the field $\phi$ at a time $ t $.\\
+In the beginning  the probability distribution is concentrated near $\phi=0$. Then it spreads out and stabilizes at $ |\phi|\sim v $ after a single oscillation, which corresponds to SSB. In (Fig. \ref{fig:tachyonicinstabilityfig8}) from \cite{Chap5:TachyonicInstability} is showed the occupation numbers $ n_{k} $ of produced particles. During the first oscillation the occupation numbers grow up to $ 10^{7}-10^{8} $ for $ k < m $ ($ k < 1 $ in the figure). Then the occupation numbers at $ k < m $ slightly decrease, while at $ k > m $ begin to grow. In the model of a complex scalar field, instead of domain walls, we obtain strings that are produced when the field falls down. We report in (Fig. \ref{fig:tachyonicinstabilityfig9}) from \cite{Chap5:TachyonicInstability} a simulation of the strings produced after one half of an oscillation of the complex scalar field. The whole process of string formation in this model occurs within a single oscillation.\\
+We see that, as in the case of the one-component scalar field, we obtain a formation of topological defects from the SSB. Indeed, this is not a small correction but an important feature of SSB. Topological defects, like other inhomogeneities generated by tachyonic instability, drain the energy of the scalar field rolling down to the minimum of the effective potential. In this way they diminuish the amplitude of subsequent oscillations of the inflaton field.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.4\textheight]{Images/Chap5/TachyonicInstability_Fig7}
+	\caption{The process of symmetry breaking in the model (\ref{Chap5:TachyonicModelComplex}) for a complex field $ \phi=\frac{1}{\sqrt{2}}(\phi_{1} + i\phi_{2}) $ \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig7}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth, height=0.25\textheight]{Images/Chap5/TachyonicInstability_Fig8}
+	\caption{Occupation numbers $ n_{k} $ of particles produced during tachyonic preheating in the model of a complex scalar field $\phi$ with effective potential $ V(\phi)=-m^{2}|\phi|^{2} + \lambda|\phi|^{4} $ with $\lambda = 10^{-4}$. In the beginning  (lower curves), $ n_{k} $ grows for $ k\le m $ ($ k\le 1 $) in this figure), but then eventually this growth spreads to larger $ k $ \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig8}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.35\textheight]{Images/Chap5/TachyonicInstability_Fig9}
+	\caption{Strings produced after one half of an oscillation in the model (\ref{Chap5:TachyonicModelComplex}) for a complex field $\phi$ \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig9}
+\end{figure}
+\subsection{Tachyonic model simulations}
+An important example of tachyonic model is provided by the theory
+\begin{equation}
+	\label{Chap5:TachyonicModel1}
+V(\phi)=-\frac{\lambda}{3}v\phi^{3} + \frac{\lambda}{4}\phi^{4} + \frac{\lambda}{12}v^{4}
+\end{equation}
+This potential is a prototype of the potential that appears in descriptions of symmetry breaking in F-term hybrid inflation \cite{Chap5:FTerm}. In this model the fluctuations increase considerably if the initial amplitude is somewhat greater than $ \delta \phi_{c} \sim \frac{\lambda v}{4\pi^{2}} $. Low probability fluctuations with $ \delta \phi \gg \delta \phi_{c} $ correspond to peaks of the initial Gaussian distribution of the fluctuations  of the field $\phi$ (see \cite{Chap5:TachyonicInstability}). In this model of tachyonic preheating the whole process looks not like a uniform growth of all modes, but more like bubble  production. The numerical simulation is showed in (Fig. \ref{fig:tachyonicinstabilityfig12}) from \cite{Chap5:TachyonicInstability}. The bubbles, that are high peaks of the field distribution, grow, change shape, and interact with each other, rapidly dissipating the vacuum energy $ V(0) $. In (Fig. \ref{fig:tachyonicinstabilityfig14}) is showed the occupation numbers of produced particles with $ \lambda=10^{-2} $. These occupation numbers grow up to $ 10^{4}-10^{5} $ within a single oscillation.\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.5\textheight]{Images/Chap5/TachyonicInstability_Fig12}
+	\caption{Field values on a 2D slice through the lattice for $ V=-\frac{\lambda}{3}v\phi^{3} + \frac{\lambda}{4}\phi^{4} $. The growth of quantum fluctuations of $\phi$ looks like bubble formation. The bubble expand and collide even before the average field value reaches the minimum. Preheating occurs due to a combined effect of bubble production, tachyonic instability and bubble wall collisions \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig12}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.25\textheight]{Images/Chap5/TachyonicInstability_Fig14}
+	\caption{Occupation numbers of particles produced during tachyonic preheating in the model (\ref{Chap5:TachyonicModel1}) with $\lambda = 10^{-2}$ \cite{Chap5:TachyonicInstability}.}
+	\label{fig:tachyonicinstabilityfig14}
+\end{figure}
+We consider now the model of tachyonic preheating with potential
+\begin{equation}
+\label{Chap5:TachyonicPreheatingPotential}
+V(\phi,\sigma)=\frac{\lambda}{4}(|\sigma|^{2}-v^{2})^{2} + \frac{g^{2}}{2}\phi^{2}|\sigma|^{2} + \frac{1}{2}m^{2}\phi^{2},
+\end{equation}
+that we have seen in the previous chapter. If $\sigma$ is a real one-component scalar, the SSB may lead to the formation of domain walls. In this case, assuming $\sigma$ a complex field, SSB after inflation produces cosmic strings \cite{Chap5:DynamicsSymmetryBreaking}. \\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.4\textheight]{Images/Chap5/SymmetryBreaking_Fig7}
+	\caption{Snapshots of the growth of the Higgs peak in a full non-linear lattice simulations, for $ \lambda=0.11/4 $ and $ V=0.003 $. Plotted is the value of the Higgs amplitude $\sigma$ in the $(x,y) $ plane, where the $ z $-coordinate is that of the highest peak. Note that several peaks appear in the simulation. Here are showned the first stages of the evolution, where the highest peak invaginates and form the bubble. In the figure $\phi$ is the our Higgs field $\sigma$ \cite{Chap5:FalseVacuumDecay}.}
+	\label{fig:symmetrybreakingfig7}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.4\textheight]{Images/Chap5/SymmetryBreaking_Fig8}
+	\caption{Same as in (Fig. \ref{fig:symmetrybreakingfig8}). Here are showed the late stages, in which gradients arise from collisions of bubbles and the symmetry is broken. In the figure $\phi$ is the our Higgs field $\sigma$ \cite{Chap5:FalseVacuumDecay}.}
+	\label{fig:symmetrybreakingfig8}
+\end{figure}
+In this model a lattice simulation can be found in \cite{Chap5:FalseVacuumDecay} and it is showed in (Fig. \ref{fig:symmetrybreakingfig7}) and (Fig. \ref{fig:symmetrybreakingfig8}).  This model leads, as the previous one, to bubble formation. The non-perturbative evolution is studied numerically solving the coupled classical equations of motion for the inflaton field $\phi$ and the Higgs field $\sigma$ with gaussian initial conditions. 
+As seen in the other models, also in this one SSB in not at all a homogeneous process. Already in the linear regime, the Higgs field $\sigma$ evolves by developing lumps in space that grows with time. In the plots (Fig. \ref{fig:symmetrybreakingfig7})  and (Fig. \ref{fig:symmetrybreakingfig8}) from \cite{Chap5:FalseVacuumDecay} is followed the classical evolution of the Higgs' lumps. From the figure we can see that the peak of the largest  Higgs' lump is the first to break the symmetry, i.e. to reach $ |\sigma|=v $, and soon after the center of the lump invaginates, creating an approximately spherically symmetric \textit{bubble}, with ridges that remain above $ |\sigma|=v $. Finally, from these plots we see that neighbouring bubbles collide and the symmetry gets fully broken through the generation of higher momentum modes.\\
+Regarding the beheaviour of the $ |\sigma(\textbf{x},t)| $ at the center of the highest Higgs lump, it oscillates around $ |\sigma|=v $ with an amplitude that is dumped in time. Oscillations of the field remain coherent and give rise to concentric bubbles, until the time when bubble collisions break the symmetry.
+
+\section{Chaotic models}
+Consider the potential of chaotic inflation
+\begin{equation}
+\label{Chap5:ChaoticModel_potential}
+V(\phi,	\chi)= \frac{1}{2}m^{2}\phi^{2} + \frac{1}{2}g^{2}\phi^{2}\chi^{2},
+\end{equation}
+where $\phi$ is the inflaton and $\chi$ the scalar field coupled to it. At the end of inflation $\phi$ is a homogeneous oscillating field and $\chi$ a quantum field which obeys an oscillator equation with a periodic frequency $ \omega_{k}^{2}=\frac{k^{2}}{a^{2}} + g^{2}\phi^{2} $. In the previous chapter we have seen that the amplitude $\chi_{k}(t)$ undergoes parametric resonance, leading to large occupation numbers of created particles $ n_{k} $. Since the occupation numbers grow very fast we can treat the field $\chi(t,\textbf{x})$ as a classical scalar field. Once the $\chi$ field is amplified in this way, the other fields coupled to it are themselves amplified. Thus within a short time of linear preheating (of order dozens of inflaton oscillations) fluctuations of $\chi$ generate inhomogeneous fluctuations of the inflaton field $\phi$.\\
+ The equation of motion for $\phi$
+\begin{equation}
+\label{Chap5:EquationForPhi}
+\Box\phi + m^{2}\phi^{2} + g^{2}\chi^{2}\phi = 0,
+\end{equation}
+in Fourier space reads
+\begin{equation}
+\label{Chap5:EquationForPhiFourierSpace}
+\ddot{\phi}_{k} + 3H\dot{\phi}_{k} + ((k^{2}/a^{2}) + m^{2})\phi_{k} = g^{2}\phi_{0}(t) \int d^{3}q\chi_{q}\chi_{q}^{*},
+\end{equation}
+where is neglected the term that is third order with respect to fluctuations and $\phi_{0}(t)$ is the background oscillation \cite{Chap5:Fragmentation}. When the amplitudes of the fields $\phi$ and $\chi$ become sufficiently large we obtain a full non-linear problem. The field evolution can be well determined using the classical equation of motion (\ref{Chap5:EquationForPhi}) supplemented by the equation for the field $\chi$,
+\begin{equation}
+\label{	Chap5:ChaoticModelEquationForChi}
+\Box \chi + g^{2}\phi^{2}\chi=0.
+\end{equation}
+To obtain simulations in this section of non-linear preheating is used the program LATTICEEASY \cite{Chap5:Latticeeasy}. LATTICEEASY can generally solve the classical equations of motion for interacting scalar fields, with or without the effects of the expansion of the universe. This program has a variety of applications since it simulates the nonlinear scalar field dynamics, i.e. parametric resonance, formation of gravitational waves, phase transitions, formation of topological defects, thermalitation after preheating. Each particular scalar field potential that the program solves is encoded in a model file, which is read in LATTICEEASY. The model contains all the necessary equations for running the potential and includes the potential itself and its first and second derivatives, all of which have to be provided in the model file. The model contains also all the parameters for a given run of the program, the number of grid points, the time step, and a number of other general variables specific to each run.\\
+ LATTICEASY uses a staggered leapfrog algorithm with a fixed time step. This means that at each step the field values $ f $ and their derivatives $\dot{f}$ are stored at two different times $ t $ and $ t + dt/2 $ respectevely. The derivatives are used to advance the field values by a full step $ dt $ and then the field values are used to calculate the second derivatives $\ddot{f}$, which are in turn used to advance the field derivatives by $ dt$ (see \cite{Chap5:Latticeeasy}).\\
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=0.8\linewidth, height=0.3\textheight]{Images/Chap5/Fragmentation_Fig1}
+ 	\caption{Evolution of spectra in the combination $ k^{3}\omega_{k}n_{k} $ of the $\phi$ and $\chi$ fields during and immediately after preheating. Bluer plots show later spectra. Horizontal axis $ k $ is in units of $ m $ \cite{Chap5:Fragmentation}.}
+ 	\label{fig:fragmentationfig1}
+ \end{figure}
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Images/Chap5/Fragmentation_Fig2}
+ 	\caption{Evolution of the comoving number density of $\phi$ (red, lower plot) and $\chi$ (blue, upper ploat) in units of $ m^{3} $. Time is in units of $ 1/m $ \cite{Chap5:Fragmentation}.}
+ 	\label{fig:fragmentationfig2}
+ \end{figure}
+For chaotic inflation we show the results of \cite{Chap5:Fragmentation} in (Fig. \ref{fig:fragmentationfig1}) expressed in terms of the evolution of the occupation numbers $ n_{k}(t) $ with $ m=10^{-6} M_{pl} $ (fixed by CMB normalitation) and $ g^{2}=2.5 \times 10^{-7} $. The size of the simulation box is $ L=10m^{-1} $ and the grid contains $ 256^{3} $ points. The spectra in (Fig. \ref{fig:fragmentationfig1})  show a rapid growth of the occupation numbers of both fields, with a resonant peak that develops first in the infrared ($ k\simeq k_{*} $) and then moves towards the ultraviolet as a result of rescattering. In the other plot in (Fig. \ref{fig:fragmentationfig2}) from \cite{Chap5:Fragmentation} is showed the evolution of the comoving number density for the fields $\phi$ and $\chi$. We can see clearly the exponentially fast growing of the occupation number of the field $\chi$, due to parametric resoanance, followed by even faster growth of the field $\phi$ due to the interaction. This beheaviour is in accordance with (\ref{Chap5:EquationForPhiFourierSpace}).\\
+Another feature of preheating is the onset of chaos: small difference in the initial conditions for the fields lead to exponentially divergent solutions, i.e. $D(t) \simeq e^{\lambda t} $, where $ D $ is the distance in phase space between the solutions and $\lambda$ is called Lyapunov exponent (see \cite{Chap5:Fragmentation}). After the violent transition the distance $ D $ begins to diverge exponentially towards the turbolent stage.\\
+The evolution of the fields in configuration space is showed in (Fig. \ref{fig:fragmentationfig4}) from \cite{Chap5:Fragmentation}. Each frame shows the spatial profile of the fields $\phi$ and $\chi$ along a two-dimensional slice of the 3D lattice. Times are reported in units of $ 1/m $.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth, height=0.6\textheight]{Images/Chap5/Fragmentation_Fig4}
+	\caption{Values of the $\phi$ and $\chi$ fields in a two dimensional slice through the lattice. The horizontal axes are spatial axes and the vertical axis is field value \cite{Chap5:Fragmentation}.}
+	\label{fig:fragmentationfig4}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.5\textheight]{Images/Chap5/Fragmentation_Fig6}
+	\caption{Field distributions. The horizontal axes are field values and the vertical axis represents the frequency of that field value on the lattice. The black dots represent the simulation results and the red lines are best-fit Gaussian curves. The fitting lines can not be seen in the first frame  because they lie directly under the dots \cite{Chap5:Fragmentation}.}
+	\label{fig:fragmentationfig6}
+\end{figure}
+For $ t \le 100 $ we have the initial evolution of the fields characterized by linear growth of fluctuations of $\chi$. The positive and negative peaks correspond to the peaks  of the initial gaussian random field $\chi$. During this stage the fluctuations have the form of a superposition of standing waves with random phases, which yield to a random gaussian field. The first panel in (Fig. \ref{fig:fragmentationfig4}) shows the fields at the end of this first linear stage. After this point the oscillations become nonlinear and $\phi$ becomes excited. The amplitude of these $\phi$ oscillations grows much faster than the initial $\chi$ oscillations and the oscillations have different and changing frequencies.\\
+For $ t \le 110 $ the peaks reach their maximum amplitude, comparable to the initial value of the homogeneous field $\phi$, and begin to spread. The two lower left panels of (Fig. \ref{fig:fragmentationfig4})  shows the peaks expanding and colliding.\\
+By $ t=124 $ the fluctuations have spread throughout the lattice. Shortly after this time all coherence is lost and the field configurations appear to be like random turbolence.\\
+The evolution during the non-linear period is analyzed not using the Fourier-mode description (\ref{Chap5:EquationForPhiFourierSpace}), but instead considering the configuration space description (\ref{Chap5:EquationForPhi}).\\
+We report also in (Fig. \ref{fig:fragmentationfig6}) from \cite{Chap5:Fragmentation} the evolution of the statistics of the fields $\phi$ and $\chi$. In (Fig. \ref{fig:fragmentationfig6})  are showed the field distributions, i.e. histograms, at various times during the evolution. Initially both fields have gaussian distributions from their random quantum fluctuations. The field $\phi$ is sharply peaked around $\phi_{0}$ and the field $\chi$ is centered around zero. As non-linear effects becomes important, the statistics of the two fields become complicate. The distribution  of the inflaton field becomes at times sharply peaked to one side (when the condensate is at an extreme end of its oscillation), and at other times with a presence of the homogeneous component plus a significant inhomogeneous component, i.e. bi-modal. The statistics of the field $\chi$ also becomes strongly non-gaussian. Moreover, the statistics of the two fields remain non-gaussian for a long time after preheating. At $ t=300 $, when the simulation in \cite{Chap5:Fragmentation} ends, the fields are still non-gaussian.\\
+The picture that emerges in this model is similar to what we observed in the previous section for tachyonic preheating in hybrid inflation.  For example considering the model (\ref{Chap5:TachyonicModel1}), small initial random fluctuations of $\phi$ are amplified by the non-linear $\phi^{3}$ term. The peaks of the gaussian field then begin to grow very fast relatively to the surrounding regions of $\phi$. In the same way, in the model discussed in this section, it is found in \cite{Chap5:Fragmentation} that oscillations of the fields $\chi$ and $\phi$ grow initially at the locations of the peaks in the initial $\chi$ field. In this model these growing peaks form a pattern of standing waves that persists throughout the linear regime and then begin to spread and overlap as rescattering becomes important.\\
+Therefore, we can split the reheating process from the end of inflation, when we have the inflaton condensate, to the begin of the radiation era, where we have the radiation of randomly moving waves, in four stages. The first is the exponentially growing of small inhomogeneities that emerge from vacuum fluctuations (due to parametric resonance or tachyonic instabilities). During this stage fluctuations are linear and the fields are gaussian random fields. The second stage is violent backreaction and rescattering of the waves with non-gaussian, non-linear and non-thermal fluctuations. In the next chapter we'll study the third and the last stage of reheating. The third stage is the Kolmogorov turbolence. During this phase the fluctuations are nearly gaussian and energy gradually cascades towards high momentum modes. The final stage is thermalitation where eventually the fields reach thermal equilibrium characterized only by the temperature.\\
+To end this section we discuss an important signature from the non-linear bubble-stage of inflaton fragmentation. Lumps of the scalar fields correspond to large energy density inhomogeneites at the scale of those bubbles, say $ R $. The collisions of bubbles generate gravitational waves. The fraction of the total energy at the time of preheating converted into gravitational waves is significant. To estimate this quantity we consider the following result. The energy converted into gravitational waves from the collision of two black holes is of the order of the black hole masses. Suppose the mass of lumps of size $ R $ equals to a fraction $ f $ of a black hole of the same size.
+Thus the fraction of energy converted to gravitational waves from the collision of two lumps is $ f $. Scalar field lumps at the Hubble scale would form black holes, so $ f = (RH)^{2} $. We can then estimate the fraction of the total energy  converted into gravitational waves as
+\begin{equation}
+\label{Chap5:fractionTotalEnergyGW}
+\frac{\rho_{GW}}{\rho_{rad}} \simeq (RH)^{2}.
+\end{equation}
+The present-day frequency of this gravitational radiation is  estimate as 
+\begin{equation}
+\label{Chap5:frequencyGW}
+f\simeq \frac{10^{7} GeV}{M} Hz,
+\end{equation}
+where $ M=V^{1/4} $ is the energy scale of inflation with the potential $ V $.\\
+For the chaotic inflation model in this section the size of the bubbles is $ R\sim few/m $ and they begin colliding at $ H\sim m/100 $ \cite{Chap5:Fragmentation}. Then the fraction of energy converted into gravitational waves is estimate as $\sim 10^{-3}-10^{-4}$. For chaotic inflation with $ M  $ at the GUT scale this frequency is too short and not observable. However, better possibility of observations comes from low energy hybrid inflation where $ f $ can be much smaller. \\
+Gravitational waves continue to to be generated during the turbolent stage and even during thermal equilibrium due to thermal fluctuations, but with a smaller amplitude. In the final chapter of this thesis we present various numerical simulations of gravitational wave production from preheating after chaotic and hybrid inflation.
 
 
-\chapter{After Preheating}
-
-\chapter{GWs from Rweheating}
+\section{Oscillons}
+We end this chapter considering a very peculiar model from which we can have a signature in the spectrum of gravitational waves. \\
+Many interestesting non-perturbative phenomena may take place during preheating such as formations of oscillons when we have the inflaton fragmentation. Oscillons are spatially localized, temporally oscillating configurations of a nonlinear scalar field theory. They are first described by Bogolubsky and Makhankov \cite{Chap5:Oscillon} and then are studied in great detail through numerical simulations. \\
+Oscillons are not strictly stable, even in the classical limit since they are not associated  with conserved charges, but are long-lived (see \cite{Chap5:OscillonAfterInflation} and \cite{Chap5:Oscillon_OscillonFormationInThreeDimension}. There are various models in which massive oscillons are generated during preheating and in a large class of inflationary scenarios oscillons may account for the majority of the energy density in the post-inflationary universe, i.e. axion monodromy model. In these scenarios, the universe undergoes a transient matter-dominated phase.\\
+Oscillons can form in a variety of models. However, an oscillon-dominated universe  can follow inflation driven by a single-field model. Oscillons can form if the inflaton potential
+\begin{equation}
+	\label{Chap5:Oscillons_Potential}
+	V(\phi)=\frac{1}{2}m^{2}\phi^{2} + U(\phi),
+\end{equation}
+where $ U(0)=0 $ and $ U(\phi) < 0 $ for some range of $\phi$.\\
+Consider potentials with $ V(\phi) \sim \phi^{2\alpha} $ during inflation and $\alpha < 1$. These models are generated by various string and supergravity scenarios and yield $ U(\phi) < 0  $ at large $\phi$. It is also required that $ V(\phi) $ has a stable minimum set at the origin in order to have $ V(\phi) \sim \phi^{2} $ at small $\phi$. We can consider the potential
+\begin{equation}
+\label{Chap5:OscillonsPotential}
+V(\phi)=\frac{m^{2}M^{2}}{2\alpha}\Bigg[\Bigg(1+\frac{\phi^{2}}{M^{2}}\Bigg)^{\alpha} - 1\Bigg],
+\end{equation}
+where $ 0 \le \alpha \le 0.9$ and $ M \le 0.05 M_{pl} $. In particular $\alpha = 1/2$ is the axion monodromy model. When $\phi/M$ is small we have $ V(\phi) \simeq m^{2}\phi^{2}/2 $. For this potential very massive oscillons can be copiously produced after inflation, giving rise to an oscillon-dominated phase. They eventually decay reheating the universe.\\
+A very interesting feature of this model is the production of gravitational waves as a consequence of an oscillon-dominated phase in the early universe. Gravitational waves can arise during their formation, during the oscillon dominated phase  itself, and during their decay and the subsequent thermalitation of the universe \cite{Chap5:GWFromOscillon}. In \cite{Chap5:GWFromOscillon} is computed the gravitational wave spectrum during the resonance and the oscillon-formation phase. In (Fig. \ref{fig:oscillonsfig2}) from \cite{Chap5:GWFromOscillon} is showed the resulting spectrum. The spectrum has a specific and characteristic structure, with multiple peaks and troughs.\\
+In models in which the scalar field is complex, one can also get nontopological solitons called Q-balls \cite{Chap5:QBall}. Also Q-balls can generate high-frequency gravitational waves \cite{Chap5:QBallGWS}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.35\textheight]{Images/Chap5/Oscillons_Fig1}
+	\caption{Sample output from a 3D oscillon simulation. Contours delineate regions where the local energy density exceeds the average value by a factor 10, showing localized, approximatevely spherical, overdensities characteristic of oscillons \cite{Chap5:Oscillon_OscillonFormationInThreeDimension}.}
+	\label{fig:oscillonsfig1}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.35\textheight]{Images/Chap5/Oscillons_Fig2}
+	\caption{Peaks and troughs of the gravitational wave spectrum. The vertical lines correspond to the gravitational wave frequencies associated with the different harmonics of the oscillon \cite{Chap5:GWFromOscillon}.}
+	\label{fig:oscillonsfig2}
+\end{figure}
 
 
 \chapter{Thermalitation}
+We have seen in the previous chapters that after inflation all energy density is stored in a Bose-condensate, the coherently oscillating inflaton field. This stage is highly unstable: non-adiabatic processes as parametric resonance or tachyonic instability lead an explosive and fast  decay of the inflaton and production of particles. The decay of the inflaton leads a rapid amplification of one or more bosonic fields to exponentially large occupation numbers. This process eventually shuts down because of backreaction and rescattering. We obtain  at the end a turbolent medium of coupled, inhomogeneous, classical waves far from equilibrium.\\
+The transition from this stage of turbolence to a hot Friedmann universe in thermal equilibrium is the stage called thermalitation. A theory of thermalitation of the fields is necessary to bridge inflation and the Hot Big Bang universe. The details of  thermalitation depend on the costituents of the fundamental Lagrangian and their coupling. At first glance the description of this process would be strongly model-dependent. However, from various analysis, i.e. \cite{Chap6:DevelopmentEquilibrium}, many features of this stage seem to hold generically across a wide spectrum of models. This is due to the fact that the conditions at the end of preheating are in general not qualitatevely sensitive to the details of inflation.\\
+In this chapter we review the main common features of thermalitation among various different model. We will discuss the beheaviour of the spectrum in terms of the so-called Kolmogorov turbolence.
+
+\section{Rules of thermalitation}
+In \cite{Chap6:DevelopmentEquilibrium} is calculated the evolution of  the number density $ n(t) $ of particles with time for different models. For all models examinated in the paper  $ n(t) $  shows an exponential growth during preheating. This exponential growth is well-studied in the previous chapters and corresponds to the explosive particle production due to parametric resonance or tachyonic instabilities. After preheating, the fields enter a turbolent regime during which $ n(t) $ decreases. Indeed, the decrease can be interpreted as a consequence of the particle interactions: as $ n_{k} $ shifts from low to high momenta the overall number decreases. We then have a flow towards infrared momenta.\\
+This beheaviour can be understood from (Fig. \ref{fig:developmentofequilibriumfig2}) from \cite{Chap6:DevelopmentEquilibrium}. The spectrum shows a cutoff at some momentum $ k_{*} $, above which the occupation number falls off exponentially.  This is because we have an excess of occupation numbers at low $ k $ due to parametric resonance. Indeed, parametric resonance is typically most efficient at exciting low momentum modes, and becomes completely inefficient above a certain cutoff $ k_{*} $. From (Fig. \ref{fig:developmentofequilibriumfig2}) we can see the flow towards higher momenta. The ultraviolet cutoff is initially at the momentum $ k_{*} $, where parametric resonance shuts down. However, during the time the cutoff moves to higher $ k $ as more modes are brought into the quasi-equilibrium of the infrared part of the spectrum. Moreover, the infrared sector  gradually flattens as the system approaches a true thermal distribution.\\
+We have an other interesting feature  studied in \cite{Chap6:DevelopmentEquilibrium}. Consider the pure one-field model $ \lambda \phi^{4} $ and the two-field model $ g^{2}\phi^{2}\chi^{2} $. The numerical analysis in \cite{Chap6:DevelopmentEquilibrium} shows that in the first case $ n_{\phi} $ decreases very slowly compared to the second. This occurs because  the interactions between $\phi$ and $\chi$ greatly speed up the thermalitation of both fields (see the plots in \cite{Chap6:DevelopmentEquilibrium}). In the pure $ \lambda \phi^{4} $ model $\phi$ can only thermalize through its weak self-interaction. Moreover, the spectra of the two fields $\phi$ and $\chi$ are essentially identical and results $ n_{\phi} \simeq n_{\chi} $. The two spectra match shortly after preheating and from that they evolve identically. This is due to the fact that the potential term $ V\simeq g^{2}\phi^{2}\chi^{2} $ is symmetric with respect to the two fields, and then they act as a single effective field.\\
+Finally, we can also include an additional decay channel for $\chi$. The interaction between $\chi$ and the decay field, $\sigma$, drag $\sigma$ exponentially quickly into an excited state. The field $\sigma$ is exponentially amplified not by parametric resonance, but by its stimulated interactions with the amplified $\chi$-field. The interaction of the two fields does not affect the preheating of $\chi$. From this results that $ n_{\chi} $ decreases as $\sigma$ grows, so the spectra of $\chi$ and $\phi$ are no longer identical.\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.25\textheight]{Images/Chap6/DevelopmentOfEquilibrium_fig2}
+	\caption{Evolution of the spectrum of the field $\chi$ in the model $ V=\frac{1}{4}\lambda \phi^{4} + \frac{1}{2}g^{2}\phi^{2}\chi^{2}. $The lower plots all show early times. In the bundle of plots higher up the spectrum rises on the right and falls on the left as time progresses  \cite{Chap6:DevelopmentEquilibrium}. }
+	\label{fig:developmentofequilibriumfig2}
+\end{figure}
+In \cite{Chap6:DevelopmentEquilibrium} the previous features are encoutered in various models.  Thus in the paper are established a set of rules that seem to hold generically. They are called \textit{rules of thermalitation}. We report them in the following:
+\begin{enumerate}
+	\item \textit{In most models of inflation exist a mechanism for exponentially amplifying fluctuations of at least one field $\chi$. These mechanisms tend to give rise an highly infrared spectrum due to the long-wavelength excitations.}\\
+	Indeed, we have seen in the case of single-field models the parametric resonance mechanism. In hybrid models the same amplification is mainly leaded by tachyonic instabilities. Adding additional fields or self-couplings has little or no effect on the resonant period. Moreover, the qualitative features of the fields arising from these processes are largely independent of the details of inflation or the mechanisms used t0 produce the fields.
+	
+	\item \textit{Exciting one field $\chi$ is sufficient to rapidly drag all other light fields with which $\chi$ interacts into a similarly excited state}. \\
+	In the paper is simulated the beheaviour of multiple fields directly coupled to $\chi$. It is sufficient to have one field rapidly excited to amplify an entire sector of interacting fields. These  amplified fields will inherit the basic features of the $\chi$-field, i.e. they will have spectra with more energy in the infrared than would be expected for a thermal distribution.
+	
+	\item \textit{The excited fields will be grouped into subsets with identical characteristic (spectra, occupation numbers, effective temperatures) depending on the coupling strengths.}\\
+	In general, fields  that are interacting in a group will thermalize much more quickly than other fields. 
+	
+	\item \textit{Once the fields are amplified, they will approach thermal equilibrium by scattering energy into higher momentum modes.}\\
+	In this process we obtain a slow redestribution of the particle occupation number as low momentum particles are scattered and combined into higher momentum modes. The tilt of the infrared part of the spectrum decreases, meanwhile the ultraviolet cutoff of the spectrum increases. Within each field group the evolution proceeds identically for all the fields. However, different groups can thermalize at very different rates.
+\end{enumerate}
+
+
+\section{Kolmogorov turbolence}
+Turbolence appears in a large variety of non-equilibrium phenomena in nature. In particular, Kolmogorov turbolence was first applied in the study of fluids with large Reynolds number. In this case Kolmogorov identified turbolence as a statistically scale invariant flow of spectral energy mediated by vortex interaction. The same structure may appear in systems of coupled waves \cite{Chap6:turbolence}.\\
+If there exists an active (stationary) source of energy in momentum space the turbolence is called \textit{stationary} (or driven). When the the source is switched off after the stage of activity, the freely propagating energy flux is called \textit{free} turbolence.\\
+In the case of reheating we can think the inflaton field as a source of energy localized in the infrared part of the spectrum. The energy flows towards a significantly separated region of ultraviolet, high momentum modes. In the first stage of turbolence the energy is pumped out by the zero-mode of the inflaton field. At this stage we have stationary turbolence driven by the zero-mode. The stage of stationary turbolence terminates when the energy left out by the inflaton zero-mode becomes smaller than the energy stored in created particles. From this moment the transport of energy from the source is negligible and we observe non-stationary evolution of particles distribution towards thermal equilibrium. This last stage of free turbolence is very long and analitically can be described as self-similar evolution.\\
+\\
+We can consider first the simple $ \lambda \phi^{4} $ model. In  (Fig. \ref{fig:turbolentthermalitationfig2}) from \cite{Chap6:TurbolentThermalitation} we see the exponential growth with time of the occupation numbers, which are showned at different moments of conformal time $\eta$.  $\bar{\phi}_{0}$ denotes the amplitude of the zero-mode oscillations. At the time $\eta = 100$ we have the parametric resonance. At later times, the growth of the resonance peak is stopped by re-scattering of particles out of the resonance band which leads the appearance of multiple peaks at $ \eta=400 $. At even later times the spectra becomes smooth because of rescattering.\\
+The particles with small momenta are distributed according to a power-law. At larger momenta  we have a cutoff that moves with time to the ultraviolet. In the system energy is continuosly inputted in the region of $ k $ near the resonance peak. We have a continuos flux of energy across momentum space, from low to high momenta.\\
+We have the following features for $\eta > 1500$ \cite{Chap6:TurbolentThermalitation}:
+\begin{enumerate}
+	\item The system overall is statistically close to a Gaussian distribution of field amplitudes.\\
+	
+	\item The spectra in the dinamically important region can be described by a power-law, $ k^{-s} $, with $ s \simeq 3/2 $. The exponent of particle distributions in the power region corresponds to Kolmogorov turbolence. The system is not in thermal equilibrium, which would imply $ s=1 $.
+	
+	\item the power-law is followed by a cutoff at higher $ k $. The position of the cutoff monotonously grows towards the ultraviolet, reflecting the evolution towards thermal equilibrium.
+	
+	\item This motion can be described as a self-similar evolution
+	\begin{equation}
+	\label{Chap6:selfSimilarEvolution}
+	n(k,\tau)=\tau^{-q}n_{0}(k\tau^{-p}),
+	\end{equation}
+where $ \tau = \eta/\eta_{c} $ and $ \eta_{c} $ is some arbitrary late-time moment. In (Fig. \ref{fig:turbolentthermalitationfig3}) from \cite{Chap6:TurbolentThermalitation} is reported the best numerical fit of \cite{Chap6:TurbolentThermalitation} that correponds to $ q \simeq 3.5p $ and $ p\simeq 1.5 $. The value of the exponent $ p $ determines the rate with which the system approaches equilibrium.
+\end{enumerate}
+In (Fig. \ref{fig:turbolentthermalitationfig1}) from \cite{Chap6:TurbolentThermalitation} is reported the squared amplitude of oscillations of the zero-mode of the inflaton field, $ \phi_{0}=<\phi> $, and the variance $ var(\phi)=<\phi^{2}> - \phi_{0}^{2} $ as a function of time. From the plot we can see the initial fast transfer of the zero-mode energy into fluctuations during  preheating (up to $\eta \sim 300$) and the subsequent decreasing of the amplitude of the zero-mode oscillations.\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.55\linewidth, height=0.3\textheight]{Images/Chap6/TurbolentThermalitation_fig2}
+	\caption{Occupation numbers as function of $ k/\bar{\phi}_{0} $ at the conformal time $ \eta=100, 400, 2500,  5000, 10000 $ \cite{Chap6:TurbolentThermalitation}.}
+	\label{fig:turbolentthermalitationfig2}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.3\textheight]{Images/Chap6/TurbolentThermalitation_fig3}
+	\caption{On the right hand size it is plotted the wave energy per decade found in lattice integration at $\eta$=3600,5100,7000,10000. On the left hand size are the same graphs but transformed according to the relation inverse to (\ref{Chap6:selfSimilarEvolution}) \cite{Chap6:TurbolentThermalitation}. }
+	\label{fig:turbolentthermalitationfig3}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.3\textheight]{Images/Chap6/TurbolentThermalitation_fig1}
+	\caption{Squared amplitude of the zero-mode oscillations, $\bar{\phi}_{0}^{2}$, and variance of the field fluctuations as functions of time $\eta$ \cite{Chap6:TurbolentThermalitation}.}
+	\label{fig:turbolentthermalitationfig1}
+\end{figure}
+
+\subsection{Analytical model}
+In the Kolmogorov turbolence we have a stationary transport of some conserved quantity between different scales in momentum space. Turbolence occurs when a source of energy or particles is present and is localized in some momentum region $ k_{in} $. Considering reheating the localized source of energy is represented by the coherently oscillating inflaton zero-mode that pumps energy into the system of particles at $ k_{in}\simeq k_{res} $. The mechanism behind the pumping can be parametric resonance, tachyonic instabilities etc.\\
+A complete analytical model is described in \cite{Chap6:TurbolentThermalitation} and here we discuss only the main points. The model is based on the analysis of the wave kinetic equation
+\begin{equation}
+\label{Chap6:waveKineticEquation}
+\dot{n}_{k}=I_{k}[n],
+\end{equation}
+where $ n_{k} $ is the occupation number which describes the average volume of phase space occupied  by the oscillations of a single mode with a wave-number $ k $. The evolution of $ n_{k} $ is a result of wave interactions. The quantity $ I_{k}[n] $ is the collision integral, which is a function of the external momentum $ k $ and a functional of the distribution function $ n $. Considering for example the scattering of two particles into two particles, the collision integral reads
+\begin{equation}
+\label{Chap6:ColisionIntegral}
+I_{k}[n] = \int d\Omega(k,q_{i})F(k,q_{i})
+\end{equation}
+In this definition are separated the contributions which are due to the (fixed) particle model, $ d\Omega(k,q_{i}) $, from those which are due to the evolving particle distribution functions, $ F(k,q_{i}) $. In this equation $ k $ is the external momentum and $ q_{i} $ refer to momenta over which the integration is carried out. The infinitesimal solid angle, $ d\Omega(k,q_{i}) $, reads
+\begin{equation}
+\label{Chap6:solidAngle}
+d\Omega(k,q_{i}) = \frac{(2\pi)^{4}|M|^{2}}{2\omega_{k}}\delta^{4}(k_{\mu},q_{i\mu})\prod_{i=1}^{3}\frac{d^{3}q_{i}}{2\omega_{i}(2\pi)^{3}}.
+\end{equation}
+In this formula the $ \delta $- function represents the usual energy-momentum conservation, $ |M|^{2} $ is the squared matrix element of the process and $\omega_{k}$ is the particle energy.
+Finally, $ F $ accounts for quantum effects and, in the limit $ n\gg 1 $, reads in this case
+\begin{equation}
+\label{Chap6:quantumEffectsf}
+F(k,q_{i}) = (n_{k} + n_{q_{1}})n_{q_{2}}n_{q_{3}} - n_{k}n_{q_{1}}(n_{q_{2}} + n_{q_{3}}).
+\end{equation}
+The limit $ n\gg 1 $ corresponds to interaction of classical waves.
+In this limit $ F  $ is a homogeneous function with  respect to multiplication of each occupation number by a quantity $\zeta$. For example, in the case of interaction of $ m $ waves $ F(\zeta n)=\zeta^{m-1}F(\zeta n) $.\\
+In the initial stage, when the turbolence is stationary, the flux should be scale-independent. Considering the energy flux, $ S^{\rho}(p) $, through the sphere of radius $ p $
+\begin{equation}
+\label{Chap6:energyFluxRaidus}
+(2\pi)^{d} \cdot S^{\rho}(p)=-\int^{p} d^{d}k \omega_{k} \dot{n}_{k}=-\frac{\pi^{d/2}}{\Gamma(1+d/2)}\int^{p}dkk^{d-1}\omega_{k}I_{k[n]_{}},
+\end{equation}
+the stationarity implies that the  integral in this equation should not depend upon its integration limit $ p $. This is possible only if the collision integral equals to zero, i.e. $ I_{k}[n]=0 $. Such solutions correspond to stationary turbolence and are found in \cite{Chap6:TurbolentThermalitation} considering states for which the collision integral has certain scaling properties under $\epsilon$-rescaling of the external momentum $ k $, i.e. 
+\begin{equation}
+\label{Chap6:rescalingCollisionIntegral}
+I_{\epsilon k}[n]=\epsilon^{-\nu}I_{k}[n].
+\end{equation}
+In an analytical approach when the process is described by free turbolence, i.e. non-stationarity, it is usually assumed that the evolution is self-similar. In the numerical simulation of \cite{Chap6:TurbolentThermalitation} at late times in the $ \lambda \phi^{4} $ model the evolution is self-similar.\\
+Suppose $ n_{0}(k) $ a distribution function at some late moment of time $ t_{0} $, when the regime of self-similarity has been already established. We can describe the evolution with a rescaling of momenta accompanied by a suitable change of the overall normalitation
+\begin{equation}
+\label{Chap6:evolutionSelfSimilarGeneral}
+n(k,\tau)=A^{\gamma}n_{0}(kA),
+\end{equation} 
+where it is defined $ \tau=t/t_{0} $, $\gamma$ is a constant and $ A(\tau) $ is some time-dependent function satisfying $ A(1)=1 $. $ A(\tau) $ and $\gamma$ are determined by solving the wave kinetic equation (\ref{Chap6:waveKineticEquation}).\\
+Using the scaling beheaviour of the collision integral $ I(k,\tau) $ (\ref{Chap6:rescalingCollisionIntegral}) (setting $\epsilon=A$), and the wave kinetic equation (\ref{Chap6:waveKineticEquation}), results
+\begin{equation}
+	\label{Chap6:Aevolution}
+A=\tau^{-p},
+\end{equation}
+with $ p=\Gamma t_{0} $ and $\Gamma$ is some typical rate. Finally, substituing (\ref{Chap6:Aevolution}) in (\ref{Chap6:evolutionSelfSimilarGeneral}) we obtain 
+\begin{equation}
+\label{Chap6:analyticalModelSelfSimilarEvolution}
+n(k\tau)=\tau^{-\gamma p}n_{0}(k\tau^{-p}),
+\end{equation}
+that confirms the numerical beheaviour (\ref{Chap6:selfSimilarEvolution}). The exponent $ p $ determines the speed with which the distribution function moves over momentum space and defines the time scale of thermalitation. During reheating the energy is concentrated at low momenta initially and should propagate to high momenta. The solution of (\ref{Chap6:analyticalModelSelfSimilarEvolution}) then is physically relevant only for $ p>0 $. The exponent $\gamma$ can be specified by appropriate boundary conditions that are studied in \cite{Chap6:TurbolentThermalitation}.
+\subsection{Numerical results}
+We refer to the numerical analysis in \cite{Chap6:TurbolentThermalitation}. In the analysis is considered the two-field model 
+\begin{equation}
+\label{Chap6:twoFieldModel}
+ V(\phi,\chi)=\frac{\lambda_{\phi}}{4}\phi^{4} + \frac{1}{2}\lambda_{\phi \chi}\phi^{2}\chi^{2} + \frac{\lambda_{\chi}}{4}\chi^{4},
+\end{equation}
+where $\phi$ is the inflaton. The couplings are set $ \lambda_{\phi}=10^{-13} $, $ g \equiv  \lambda_{\phi \chi}/\lambda_{\phi}=30 $ and $ h \equiv \lambda_{\chi}/\lambda_{\phi} $. The parameter $ h $ is varied in the range $ 0.1 g \le h \le 10^{4} g $.\\
+At late times the spectra of the two fields are very similar to the one-field model and have the same turbolent exponents, $ s=3/2 $. Both fields evolve in a self-similar way with $ p=1.5 $ at sufficiently late times.\\
+The measure of the total energy density stored in particles as function of time is shown in (Fig. \ref{fig:turbolentthermalitationfig5}) and (Fig. \ref{fig:turbolentthermalitationfig6u}) from \cite{Chap6:TurbolentThermalitation} in which are compared models with two different values of $ h $. We can see three different regimes:
+\begin{enumerate}
+	\item \textit{Parametric resonance:} In this regime the energy density $\rho_{\chi}$ grows exponentially. The resonance stops when re-scattering becomes important. Larger is the parameter $ h $, earlier resonance stops.
+	
+	\item \textit{Stationary turbolence:} At later time the energy density in $\chi$ particles grows linearly with time. This is a sign of stationary turbolence since in this phase the flux of energy is constant and the total energy has to grow linearly with time.
+	
+	\item \textit{Free turbolence:} This phase starts when the energy density in the zero-mode of the inflaton field drops below  the energy density already stored in particles. From this point the regime of free turbolence, with conserved energy in particles, follows as a self-similar evolution.
+\end{enumerate}
+If we consider models with larger self-coupling turns out that the parametric resonance stops earlier and only a negligible part of the inflaton energy is transferred to particles during the resonance stage. Moreover, in \cite{Chap6:TurbolentThermalitation} is showed that if all coupling constants are of order of the inflaton self-coupling, thermalitation becomes a very long process and the universe reheats to a very low temperature $ T \sim 100  $ eV. This means that some couplings, such as self-couplings or couplings to the inflaton in a realistic model, have to exceed significantly the scale of the inflaton self-coupling. In models with larger couplings thermalitation proceeds faster. In realistic models the major mechanism of energy transfer from the inflaton to particles is stationary turbolence. Indeed, in many models the parametric resonance stops very soon, only when a negligible fraction of the inflaton energy has decayed.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.35\textheight]{Images/Chap6/TurbolentThermalitation_fig5}
+	\caption{Spectral energy distributions for $\chi$ (upper panel) in the model with $ h=10g $. In each panel it is plotted the wave energy per decade found in lattice integrations at $\eta = 1000, 1500, 2000$. In the lower-left conrner of each panel are the same graphs transformed according to (\ref{Chap6:selfSimilarEvolution}) \cite{Chap6:TurbolentThermalitation}.}
+	\label{fig:turbolentthermalitationfig5}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.3\textheight]{Images/Chap6/TurbolentThermalitation_fig6ù}
+	\caption{Different regimes of the evolution of the $\chi$ field for two values of self-coupling, $ h=10g $ and $ h=100g $. The dashed lines correspond to a linear growth of energy in the $\chi$ field with time, $\rho_{\chi} \propto \eta$ \cite{Chap6:TurbolentThermalitation}.}
+	\label{fig:turbolentthermalitationfig6u}
+\end{figure}
+
+\section{Equation of state}
+In \cite{Chap7:Peloso_Thermalitation} is computed the equation of state during and immediately after preheating. In this paper is considered a chaotic inflaton quadratic potential $ V(\phi,\chi)=\frac{1}{2}m^{2}\phi^{2}+\frac{1}{2}g^{2}\phi^{2}\chi^{2} $ with  mass of the inflaton $ m\simeq 10^{13} $ GeV.\\
+Previously we have seen that  immediately after inflation the equation of state is effectively the one of matter domination since we expect that in this stage the frequency of oscillations of the inflaton  is much higher than the rate of expansion $ H $.\\
+In \cite{Chap7:Peloso_Thermalitation} is perfomed a three-dimensional lattice simulation for this model with $ m=10^{-6} M_{pl} $ and $ g^{2}=10^{-7} $. It is chosen this value because it is large enough to produce highly efficient preheating but small enough that the occupation numbers $ n_{k} \sim 1/g^{2}$ produce strong rescattering.\\
+The numerical simulation is showed in (Fig. \ref{fig:equationofstatefig1}) from \cite{Chap7:Peloso_Thermalitation} where it is studied the time evolution of the EOS $ \omega(t) $ for different couplings.
+Each point plotted in the figure represents the value of $\omega$ averaged over a complete inflaton oscillation. The equation of state averaged over inflaton oscillations is $\omega = 0$ immediately after inflation and it sharply changes at the end of preheating. In \cite{Chap7:Peloso_Thermalitation} are showed  three important points:
+\begin{enumerate}
+	\item \textit{The transition of the EOS from $\omega=0$ to the value $\omega \sim 0.2-0.3$ occurs very sharply, within a time interval $\sim 10^{-36}$ seconds.}\\
+	In (Fig. \ref{fig:equationofstatefig1}) the unit of time is $ 1/m $ ($ m $ inflaton mass), i.e. $ 10^{-37} $ seconds. The first stage of preheating is completed in $ 10^{-35} $ seconds.
+	\item \textit{The dependence of $\omega(t)$ on the coupling $ g^{2} $ for resonant preheating is a non-monotonic function of $ g^{2} $.}\\
+	The time at which preheating comes to an end is very weakly (logarithmically) dependent on the coupling. In (Fig. \ref{fig:equationofstatefig1}) we can see the curves $\omega(t)$ initially shifts to the left towards an earlier end of preheating. However, at some point the curves stop moving to the left and instead begin to return towards the right. Moreover, as $ g^{2} $ is varied, the function $\omega$ not only shifts, but it also varies its detailed shape.
+	\item \textit{The equation of state $\omega$ does not necessarily immediately go to the radiation dominated value $ 1/3 $.}\\
+	This is due to the fact that immediately after preheating the light field still has a significant induced effective mass because of the interaction with the inflaton field. On the other hand, a significant residual contribution comes from the inflaton itself. 
+\end{enumerate}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.25\textheight]{Images/Chap6/EquationOfState_fig1}
+	\caption{Evolution of the equation of state $\omega =\omega (t)$ as a function of time (given in units of $ m^{-1} $) for various couplings $ g^{2} $ around $ g^{2}=2 \times 10^{-7} $ \cite{Chap7:Peloso_Thermalitation}.}
+	\label{fig:equationofstatefig1}
+\end{figure}
+
+\section{Thermalitation}
+During the last stage of free turbolence the front of the distribution propagates into the ultraviolet until it relaxes to a Bose-Einstein (or Fermi-Dirac) spectrum. At this stage quantum effects dominate over thermal fluctuations and thermalitation is obtained through particle fusion and off-shell processes. \\
+Thermalitation is a long process, much longer than the preceding preheating, non-linear stage, turbolent phases. A complete thermalitation requires two conditions: the system has to reach a nearly constant equation of state with $\omega \sim 1/3$ (radiation-dominated universe), and it has to reach Local Thermal Equilibrium (LTE).\\
+ In principle, the universe can attain a radiation-like equation of state during or shortly after the turbolent stage. However, it can take much longer  to reach a state of LTE and involves particle fusion and off-shell processes.  We say that the universe is in a prethermalized state if $\omega \simeq 1/3$ but LTE is not established yet.\\
+If we consider long-lived objects such as Q-balls or oscillons prethermalitation can be delayed. They beheave as pressureless dust  and they then should decay into relativistic matter to achieve a radiation-like equation of state before BBN. On the other hand, if we consider  massive scalar field condensates, they must decay completely before prethermalitation. For example, if there is some remnant condensate, even if subdominant in energy during thermalitation, it can make the universe re-enter in a matter-dominated  state of expansion before BBN. To avoid this, we can add perturbative interactions for the absolute removal of the inflaton condensate such that a three-leg interactions, i.e. $\phi\chi^{2}$, or a Yukawa interaction with fermions, $\phi \bar{\psi}\psi$. \\ 
+A state of LTE is characterized by particle species both in kinetic and chemical equilibrium. The kinetic equilibrium ensures that the moment distribution of the particles maximizes the entropy. Chemical equilibrium, on the other hand,  ensures the stability of different species of matter interacting with each other. Kinetic and chemical equilibrium require in this stage the re-distribution of momentum and energy between different particles and the increase of their total number. Both number-conserving and number-violating (i.e. off-shell processes, particle fusion) reactions are involved.\\
+Kinetic equilibrium entails efficient exchange of energy and momentum between particles. This means that it is sufficient to have number-conserving interactions only. Instead, chemical equilibrium can be achieved only by changing the number of particles. Even if number-violating interactions are suppressed initially (for example particles mediating this type of interactions have a large mass at early times), these processes become efficient during the time.  Therefore, particles flow to lower chemical potentials until the sum of chemical potentials of reacting particles becomes equal to the sum of the chemical potentials of the products in every reaction. At this point full LTE is reached \cite{Chap4:Lozanov}.\\
+An understanding of the entire thermalitation process is still incomplete. In particular, given any particular model, it remains an open challenge to trace the evolution of the system through each of the four major stages and compute a robust equilibrium reheat temperature, $ T_{reh} $ \cite{Chap4:AminHetrzberg}. For references about thermalitation see for example \cite{Chap4:AminHetrzberg} and \cite{Chap4:Lozanov}.\\ 
+\\
+We can sum up all the stages of rehating after inflation using the results of \cite{Chap7:Peloso_Thermalitation}:
+\begin{enumerate}
+	\item \textit{Preheating:} This first phase, dominated by parametric resonance, lasts typically $\delta t_{1} \sim 100 m^{-1}$, where $ m $ is the mass of the inflaton field.
+	
+	\item \textit{Non-linear dynamics}: This stage occurs at the end of preheating. It consists of a short and violent stage in which non-linear effects evolve in a chaotic way, erasing details of initial conditions. This stage lasts $ \delta t_{2} \sim 1 0m^{-1} $.
+	
+	\item \textit{Turbolent regime:} The spectrum of fluctuations cascades towards both ultraviolet and infrared modes. This process lasts on a time-scale $\delta t_{3}$ which is longer than either $\delta t_{1}$ and $ \delta t_{2} $
+	
+	\item \textit{Thermalitation:} This last stage is characterized by particle fusion and off-shell processes. The reaching of LTE state occurs on a time-scale $\delta t_{4}$ which is the longest of the four stages.  
+\end{enumerate}
+
+
+
+
+\chapter{GWs from Reheating}
+
+
+
 
 
 
@@ -3394,7 +3870,7 @@ In the case in which the number of oscillating homogeneous fields is much greate
 	
 	\bibitem{Planck2018:intro} Y. Akrami et al., Astron. Astrophys. \textbf{641}, A9 (2020).
 	
-	\bibitem{Steigman:nucleosynthesisIntro} G. Steigman, Ann.Rev.Nucl.Part.Sci. \textbf{57}, 463-491 (2007) [arXiv:0712.1100].
+	\bibitem{Steigman:nucleosynthesisIntro} G. Steigman, Ann. Rev. Nucl. Part. Sci. \textbf{57}, 463-491 (2007) [arXiv:0712.1100].
 	
 	\bibitem{ReheatingPredictionsSingleFieldModel:intro} J.L. Cook et al., JCAP \textbf{1504} (2015) 047 [arXiv:1502.04673].
 	
@@ -3414,17 +3890,17 @@ In the case in which the number of oscillating homogeneous fields is much greate
 	
 	\bibitem{Dodelson:Chap1} S. Dodelson, F. Schmidt, \emph{Modern Cosmology} (Academic Press, 2020).
 	
-	\bibitem{TopDefects:Linde} A. Linde,  (1990), arXiv:hep-th/0503203.
+	\bibitem{TopDefects:Linde} A. Linde, arXiv:hep-th/0503203.
 	
 	\bibitem{Plank2015:Chap1} Planck, P. A. R. Ade et al., (2015), arXiv:1502.02114.
 	
-	\bibitem{Chap2:Fig1} A. Albrecht, (2000), arXiv:astro-ph/0007247.
+	\bibitem{Chap2:Fig1} A. Albrecht, arXiv:astro-ph/0007247.
 	
 	\bibitem{Chap2: Linde_NewInflation} A. D. Linde, Phys. Lett. \textbf{B108}, 389 (1982).
 	
 	\bibitem{ChaoticInflationLinde:Chap2} A. D. Linde, Phys. Lett. \textbf{B129}, 177  (1983).  
 	
-	\bibitem{Chap2:Linde_HystoryInflation} A. Linde, (2007), arXiv: 0705.0164. 
+	\bibitem{Chap2:Linde_HystoryInflation} A. Linde, arXiv: 0705.0164. 
 	
 	\bibitem{Chap2:NaturalInflation} K. Freese, J. A. Frieman and A. V. Olinto, Phys. Rev. Lett. \textbf{65}, 3233 (1990).
 	
@@ -3460,7 +3936,7 @@ In the case in which the number of oscillating homogeneous fields is much greate
 	
 	\bibitem{Chap3:Seto_Yokohama} N. Seto and J. Yokoyama, J. Phys. Soc. Jap. \textbf{72}, 3082 (2003).
 	
-	\bibitem{Chap3:Ligo_Virgo} J. Aasi \textit{et al.} [LIGO Scientific and VIRGO Collaborations], arXiv:1406.4556 [gr-qc].
+	\bibitem{Chap3:Ligo_Virgo} J. Aasi \textit{et al.} [LIGO Scientific and VIRGO Collaborations], arXiv:1406.4556.
 	
 	\bibitem{Chap3:PulsarTiming} P. B. Demorest, R. D. Ferdman, M. E. Gonzalez, D. Nice, S. Ransom, I. H. Stairs, Z. Arzoumanian and A. Brazier \textit{et al.}, Astrophys. J. \textbf{762}, 94 (2013) [arXiv:1201.6641].
 		
@@ -3510,7 +3986,36 @@ In the case in which the number of oscillating homogeneous fields is much greate
 	
 	\bibitem{Chap4:multifieldPreheating} J. Martin and L. Pinol, arXiv:2105.03301.
 	
-		
+	\bibitem{Chap5:DynamicsSymmetryBreaking} G. Felder, J. Garc\'{i}a-Bellido, P. B. Greene, L. Kofman, A. Linde and I. Tkachev, Phys. Rev. Lett. \textbf{87}, 011601 (2001) [arXiv:hep-ph/0012142].
+	
+	\bibitem{Chap5:TachyonicInstability} G. Felder, L. Kofman and A. Linde, Phys. Rev. \textbf{D64}, 123517 (2001) [arXiv:hep-th/0106179].
+	
+	\bibitem{Chap5:FalseVacuumDecay} J. Garc\'{i}a-Bellido, M. G. P\'{e}rez and A. Gonz\'{a}lez-Arroyo, Phys. Rev. \textbf{D67}, 103501 (2003) [arXiv:hep-ph/0208228].
+	
+	\bibitem{Chap5:Fragmentation} G. N. Felder and L. Kofman, Phys. Rev. \textbf{D75}, 043518 (2007) [arXiv:hep-ph/0606256].
+	
+	\bibitem{Chap5:Latticeeasy} G. Felder and I. Tkachev arXiv:hep-ph/0011159.
+	
+	\bibitem{Chap5:Oscillon_OscillonFormationInThreeDimension} M. A. Amin, R. Easther and H. Finkel, JCAP \textbf{1012}, 001 (2010) [arXiv:1009.2505].
+	
+	\bibitem{Chap5:OscillonAfterInflation} M. A. Amin, R. Easther, H. Finkel, R. Flauger and M. P. Hertzberg, Phys. Rev. Lett. \textbf{108}, 241302 (2012) [arXiv:1106.3335].
+	
+	\bibitem{Chap5:GWFromOscillon} S.-Y. Zhou, E. J. Copeland, R. Easther, H. Finkel, Z.-G. Mou and P. M. Saffin, JHEP \textbf{1310}, 026 (2013) [arXiv:1304.6094].
+	
+	\bibitem{Chap5:FTerm} E. J. Copeland, A. R. Liddle, D. H. Lyth, E. D. Stewart and D. Wands, Phys. Rev. \textbf{D49}, 6410 (1994).
+	
+	\bibitem{Chap5:Oscillon} I. L. Bogolyubsky and V. G. Makhankov, Pisma Zh. Eksp. Teor. Fiz. \textbf{24}, 15 (1976).
+
+	\bibitem{Chap5:QBall} S. R. Coleman, Nucl. Phys. \textbf{B262}, 263 (1985). 	
+
+	\bibitem{Chap5:QBallGWS}T. Chiba, K. Kamada and M. Yamaguchi, Phys. Rev. \textbf{D81}, 083503 (2010).	
+	
+	\bibitem{Chap6:DevelopmentEquilibrium} G. Felder and L. Kofman, Phys. Rev. \textbf{D63}, 103503 (2001) [arXiv:hep-ph/0011160]).
+	
+	\bibitem{Chap6:TurbolentThermalitation} R. Micha and I. I. Tkachev, Phys. Rev. \textbf{D70}, 043538 (2004) [arXiv:hep-ph/0403101].
+	
+	\bibitem{Chap6:turbolence} U. Frisch, \textit{Turbolence} (Cambridge University Press, 1995).
+	
 \end{thebibliography}	
 	
 \end{document}
