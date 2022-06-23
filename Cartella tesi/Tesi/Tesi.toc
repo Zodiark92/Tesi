@@ -5,69 +5,79 @@
 \contentsline {section}{\numberline {1.2}Standard cosmology and inflation}{2}{}%
 \contentsline {section}{\numberline {1.3}The inflaton equation}{4}{}%
 \contentsline {section}{\numberline {1.4}Classical Dynamics}{6}{}%
-\contentsline {subsection}{\numberline {1.4.1}Slow-roll parameters}{7}{}%
+\contentsline {subsection}{\numberline {1.4.1}Slow-roll parameters}{6}{}%
 \contentsline {section}{\numberline {1.5}Inflation and cosmological perturbations}{9}{}%
-\contentsline {subsection}{\numberline {1.5.1}Quantum Fluctuations}{10}{}%
-\contentsline {subsection}{\numberline {1.5.2}Power spectrum}{12}{}%
-\contentsline {subsection}{\numberline {1.5.3}Exact solution}{13}{}%
-\contentsline {subsection}{\numberline {1.5.4}Gravitational waves}{14}{}%
-\contentsline {subsection}{\numberline {1.5.5}Primordial curvature perturbation}{15}{}%
-\contentsline {subsection}{\numberline {1.5.6}Consistency relation}{17}{}%
-\contentsline {chapter}{\numberline {2}Inflation Zoology and Reheating}{19}{}%
-\contentsline {section}{\numberline {2.1}Inflationary models}{20}{}%
-\contentsline {subsection}{\numberline {2.1.1}Guth's Inflation}{20}{}%
-\contentsline {subsection}{\numberline {2.1.2}Chaotic Inflation}{22}{}%
-\contentsline {subsection}{\numberline {2.1.3}Small-field models}{24}{}%
-\contentsline {subsection}{\numberline {2.1.4}Hybrid models}{25}{}%
-\contentsline {section}{\numberline {2.2}Observations}{27}{}%
-\contentsline {section}{\numberline {2.3}Reheating}{28}{}%
-\contentsline {chapter}{\numberline {3}Reheating Observables}{33}{}%
-\contentsline {section}{\numberline {3.1}Energy density of GWs}{34}{}%
-\contentsline {subsection}{\numberline {3.1.1}The transfer function}{34}{}%
-\contentsline {subsection}{\numberline {3.1.2}The spectral density $\Omega _{GW}(k)$}{35}{}%
-\contentsline {subsection}{\numberline {3.1.3}Analytical solutions}{36}{}%
-\contentsline {section}{\numberline {3.2}Thermal history}{39}{}%
-\contentsline {section}{\numberline {3.3}GWs and reheating}{41}{}%
-\contentsline {section}{\numberline {3.4}Late-time entropy production}{47}{}%
-\contentsline {section}{\numberline {3.5}Blue-tilted spectrum}{49}{}%
-\contentsline {subsection}{\numberline {3.5.1}Extension to general case}{53}{}%
-\contentsline {section}{\numberline {3.6}Equation of state}{54}{}%
-\contentsline {subsection}{\numberline {3.6.1}GWs and equation of state}{56}{}%
-\contentsline {section}{\numberline {3.7}Informations from CMB}{57}{}%
-\contentsline {subsection}{\numberline {3.7.1}Results}{61}{}%
-\contentsline {section}{\numberline {3.8}Bayesian approach}{62}{}%
-\contentsline {chapter}{\numberline {4}Preheating}{69}{}%
-\contentsline {section}{\numberline {4.1}Parametric resonance model}{70}{}%
-\contentsline {subsection}{\numberline {4.1.1}Elementary reheating}{70}{}%
-\contentsline {subsection}{\numberline {4.1.2}Parametric resonance}{71}{}%
-\contentsline {section}{\numberline {4.2}Resonance after chaotic inflation}{75}{}%
-\contentsline {subsection}{\numberline {4.2.1}Stochastic resonance}{76}{}%
-\contentsline {subsection}{\numberline {4.2.2}WKB approximation}{77}{}%
-\contentsline {subsection}{\numberline {4.2.3}Stochastic resonance: analytic approach}{78}{}%
-\contentsline {section}{\numberline {4.3}Backreaction and rescattering}{82}{}%
-\contentsline {section}{\numberline {4.4}Model $\lambda \phi ^{4}$}{86}{}%
-\contentsline {subsection}{\numberline {4.4.1}Equation for the inflaton}{86}{}%
-\contentsline {subsection}{\numberline {4.4.2}Conformal theory}{88}{}%
-\contentsline {subsection}{\numberline {4.4.3}Analysis of Lame equation}{89}{}%
-\contentsline {subsection}{\numberline {4.4.4}End of resonance}{93}{}%
-\contentsline {subsection}{\numberline {4.4.5}Preheating with a massive self-interacting inflaton}{93}{}%
-\contentsline {section}{\numberline {4.5}Tachyonic preheating}{94}{}%
-\contentsline {section}{\numberline {4.6}Other models}{96}{}%
-\contentsline {subsection}{\numberline {4.6.1}Instant preheating}{96}{}%
-\contentsline {subsection}{\numberline {4.6.2}Preheating of fermions}{96}{}%
-\contentsline {subsection}{\numberline {4.6.3}Gauge-field preheating}{97}{}%
-\contentsline {subsection}{\numberline {4.6.4}Multi-field preheating}{98}{}%
-\contentsline {chapter}{\numberline {5}Non-linear Evolution}{99}{}%
-\contentsline {section}{\numberline {5.1}Tachyonic model}{99}{}%
-\contentsline {subsection}{\numberline {5.1.1}Lattice simulations}{102}{}%
-\contentsline {subsection}{\numberline {5.1.2}Tachyonic model simulations}{103}{}%
-\contentsline {section}{\numberline {5.2}Chaotic models}{107}{}%
-\contentsline {section}{\numberline {5.3}Oscillons}{113}{}%
-\contentsline {chapter}{\numberline {6}Thermalitation}{115}{}%
-\contentsline {section}{\numberline {6.1}Rules of thermalitation}{115}{}%
-\contentsline {section}{\numberline {6.2}Kolmogorov turbolence}{117}{}%
-\contentsline {subsection}{\numberline {6.2.1}Analytical model}{118}{}%
-\contentsline {subsection}{\numberline {6.2.2}Numerical results}{120}{}%
-\contentsline {section}{\numberline {6.3}Equation of state}{121}{}%
-\contentsline {section}{\numberline {6.4}Thermalitation}{122}{}%
-\contentsline {chapter}{\numberline {7}GWs from Reheating}{125}{}%
+\contentsline {subsection}{\numberline {1.5.1}Quantum Fluctuations}{9}{}%
+\contentsline {subsection}{\numberline {1.5.2}Power spectrum}{11}{}%
+\contentsline {subsection}{\numberline {1.5.3}Exact solution}{12}{}%
+\contentsline {subsection}{\numberline {1.5.4}Gravitational waves}{12}{}%
+\contentsline {subsection}{\numberline {1.5.5}Primordial curvature perturbation}{14}{}%
+\contentsline {subsection}{\numberline {1.5.6}Consistency relation}{16}{}%
+\contentsline {chapter}{\numberline {2}Inflation Zoology and Reheating}{17}{}%
+\contentsline {section}{\numberline {2.1}Inflationary models}{18}{}%
+\contentsline {subsection}{\numberline {2.1.1}Guth's Inflation}{18}{}%
+\contentsline {subsection}{\numberline {2.1.2}Chaotic Inflation}{20}{}%
+\contentsline {subsection}{\numberline {2.1.3}Small-field models}{22}{}%
+\contentsline {subsection}{\numberline {2.1.4}Hybrid models}{23}{}%
+\contentsline {section}{\numberline {2.2}Observations}{25}{}%
+\contentsline {section}{\numberline {2.3}Reheating}{26}{}%
+\contentsline {chapter}{\numberline {3}Reheating Observables}{31}{}%
+\contentsline {section}{\numberline {3.1}Energy density of GWs}{32}{}%
+\contentsline {subsection}{\numberline {3.1.1}The transfer function}{32}{}%
+\contentsline {subsection}{\numberline {3.1.2}The spectral density $\Omega _{GW}(k)$}{33}{}%
+\contentsline {subsection}{\numberline {3.1.3}Analytical solutions}{34}{}%
+\contentsline {section}{\numberline {3.2}Thermal history}{37}{}%
+\contentsline {section}{\numberline {3.3}GWs and reheating}{39}{}%
+\contentsline {section}{\numberline {3.4}Late-time entropy production}{45}{}%
+\contentsline {section}{\numberline {3.5}Blue-tilted spectrum}{47}{}%
+\contentsline {subsection}{\numberline {3.5.1}Extension to general case}{51}{}%
+\contentsline {section}{\numberline {3.6}Equation of state}{52}{}%
+\contentsline {subsection}{\numberline {3.6.1}GWs and equation of state}{54}{}%
+\contentsline {section}{\numberline {3.7}Informations from CMB}{55}{}%
+\contentsline {subsection}{\numberline {3.7.1}Results}{59}{}%
+\contentsline {section}{\numberline {3.8}Bayesian approach}{60}{}%
+\contentsline {chapter}{\numberline {4}Preheating}{67}{}%
+\contentsline {section}{\numberline {4.1}Parametric resonance model}{67}{}%
+\contentsline {subsection}{\numberline {4.1.1}Elementary reheating}{67}{}%
+\contentsline {subsection}{\numberline {4.1.2}Parametric resonance}{69}{}%
+\contentsline {section}{\numberline {4.2}Resonance after chaotic inflation}{73}{}%
+\contentsline {subsection}{\numberline {4.2.1}Stochastic resonance}{74}{}%
+\contentsline {subsection}{\numberline {4.2.2}WKB approximation}{75}{}%
+\contentsline {subsection}{\numberline {4.2.3}Stochastic resonance: analytic approach}{76}{}%
+\contentsline {section}{\numberline {4.3}Backreaction and rescattering}{80}{}%
+\contentsline {section}{\numberline {4.4}Model $\lambda \phi ^{4}$}{84}{}%
+\contentsline {subsection}{\numberline {4.4.1}Equation for the inflaton}{84}{}%
+\contentsline {subsection}{\numberline {4.4.2}Conformal theory}{85}{}%
+\contentsline {subsection}{\numberline {4.4.3}Analysis of Lame equation}{87}{}%
+\contentsline {subsection}{\numberline {4.4.4}End of resonance}{89}{}%
+\contentsline {subsection}{\numberline {4.4.5}Preheating with a massive self-interacting inflaton}{91}{}%
+\contentsline {section}{\numberline {4.5}Tachyonic preheating}{92}{}%
+\contentsline {section}{\numberline {4.6}Other models}{93}{}%
+\contentsline {subsection}{\numberline {4.6.1}Instant preheating}{93}{}%
+\contentsline {subsection}{\numberline {4.6.2}Preheating of fermions}{94}{}%
+\contentsline {subsection}{\numberline {4.6.3}Gauge-field preheating}{95}{}%
+\contentsline {subsection}{\numberline {4.6.4}Multi-field preheating}{96}{}%
+\contentsline {chapter}{\numberline {5}Non-linear Evolution}{97}{}%
+\contentsline {section}{\numberline {5.1}Tachyonic model}{97}{}%
+\contentsline {subsection}{\numberline {5.1.1}Lattice simulations}{100}{}%
+\contentsline {subsection}{\numberline {5.1.2}Tachyonic model simulations}{101}{}%
+\contentsline {section}{\numberline {5.2}Chaotic models}{105}{}%
+\contentsline {section}{\numberline {5.3}Oscillons}{111}{}%
+\contentsline {chapter}{\numberline {6}Thermalitation}{113}{}%
+\contentsline {section}{\numberline {6.1}Rules of thermalitation}{113}{}%
+\contentsline {section}{\numberline {6.2}Kolmogorov turbolence}{115}{}%
+\contentsline {subsection}{\numberline {6.2.1}Analytical model}{117}{}%
+\contentsline {subsection}{\numberline {6.2.2}Numerical results}{118}{}%
+\contentsline {section}{\numberline {6.3}Equation of state}{119}{}%
+\contentsline {section}{\numberline {6.4}Thermalitation}{120}{}%
+\contentsline {chapter}{\numberline {7}GWs from Reheating}{123}{}%
+\contentsline {section}{\numberline {7.1}Emission of GWs}{123}{}%
+\contentsline {section}{\numberline {7.2}GW Energy Density Spectrum}{125}{}%
+\contentsline {section}{\numberline {7.3}No-go theorem}{128}{}%
+\contentsline {section}{\numberline {7.4}Analytical calculations}{129}{}%
+\contentsline {subsection}{\numberline {7.4.1}Linear Preheating}{130}{}%
+\contentsline {subsection}{\numberline {7.4.2}Non-linear stage}{130}{}%
+\contentsline {subsection}{\numberline {7.4.3}Thermalitation}{131}{}%
+\contentsline {section}{\numberline {7.5}Numerical analysis}{132}{}%
+\contentsline {section}{\numberline {7.6}Other methods}{135}{}%
+\contentsline {section}{\numberline {7.7}Tachyonic Models}{140}{}%
